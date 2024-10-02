@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array dan Perulangan</title>
+</head>
+<body>
+    <script>
+        // membuat array
+        var products = ["Senter", "Radio", "Antena", "Obeng"];
+
+        document.write("<h3>Daftar Produk:</h3>");
+        document.write("<ol>");
+        // 1
+        // menggunakan perulangan untuk mencetak semua isi array
+        for(Let  = 0; i < products.length; i++){
+            document.write(`<li>${ products[i] }</li>`);
+        }
+        document.write("</ol>");
+
+        //2
+        products.forEach((data) => {
+            document.write(`<li>${data}</li>`);
+        });
+    </script>
+</body>
+</html>
