@@ -1,0 +1,120 @@
+// menambah 
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Belajar JavaScript di STIKOM</title>
+
+</head>
+
+<body>
+    <h1>Menambah Elemen Array</h1>
+    <script>
+        const buah = ['Apel', 'Pisang', 'Mangga'];
+        buah.forEach(function(namaBuah) {
+            document.write(namaBuah);
+        });
+    </script>
+
+</body>
+</html>
+
+// manipulasi
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Belajar JavaScript di STIKOM</title>
+
+</head>
+
+<body>
+    <h1>Manipulasi Elemen Array</h1>
+    <script>
+        const angka = ['1', '2', '3'];
+        const angkaGanda = [];
+
+            angka.forEach(function(num) {
+            angkaGanda.push(num * 2);
+        });
+        document.write(angkaGanda);  // Output: [2,4,6]
+    </script>
+    
+</body>
+</html>
+
+// iterasi
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Belajar JavaScript di STIKOM</title>
+
+</head>
+
+<body>
+    <h1>Iterasi Elemen Array</h1>
+    <script>
+        const buku = [
+            { judul: 'To Kill a Mockingbird', penulis: 'Harper Lee' },
+            { judul: '1984', penulis: 'George Orwell' },
+            { judul: 'The Catcher in the Rye', penulis: 'J.D. Salinger' }
+        ];
+
+        buku.forEach(function(b) {
+            document.write('Judul: ${b.judul}, Penulis: ${b.penulis}');
+        });
+        document.write(angkaGanda);  // Output: [2,4,6]
+    </script>
+    
+</body>
+</html>
+
+// map Method
+<!DOCTYPE htlml>
+<html>
+<body>
+    <h1>Belajar JavaScript di STIKOM</h1>
+    <h2>The map() Method</h2>
+
+    <p>Membuat array baru dengan fungsi map</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const numbers1 = [45, 4, 9, 16, 25];
+        const numbers2 = numbers1.map(myFunction);
+
+        document.getElementById("demo").innerHTML = numbers2;
+
+        function myFunction(value, index, array) {
+            return value * 2;
+        }
+    </script>
+
+</body>
+</html>
+
+// filter Method
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript Arrays</h1>
+    <h2>The filter() Method</h2>
+
+    <p>Membuat array baru dengan fungsi filter</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const numbers = [45, 4, 9, 25];
+        const over18 = numbers.filter(myFunction);
+
+        document.getElementById("demo").innerHTML = over18;
+
+        function myFunction(value, index, array) {
+            return value > 18;
+        }
+    </script>
+</body>
+</html>

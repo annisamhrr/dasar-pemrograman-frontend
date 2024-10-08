@@ -1,0 +1,166 @@
+// method objek Array: Array.join()
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Belajar JavaScript di STIKOM</title>
+
+        <script>
+            var arr1 = [1,2,3,4,5,"a","b","c","d","e"];
+            document.write(arr1.join());
+        </script>
+    </head>
+</html>
+
+// method objek Array: Array.reserve()
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Belajar JavaScript di STIKOM</title>
+
+        <script>
+            var arr1 = [1,2,3,4,5,"a","b","c","d","e"];
+            document.write(arr1.toString());         //hasil: 1,2,3,4,5,a,b,c,d,e
+
+            arr1.reserve();
+            document.write(arr1.toString());         //hasil: e,d,c,b,a,5,4,3,2,1
+        </script>
+    </head>
+</html>
+
+// method objek Array: Array.sort()
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Belajar JavaScript di STIKOM</title>
+
+        <script>
+            var arr1 = ["zulkifli","andi","erik","joko","dina"];
+            arr1.sort()
+            document.write(arr1.toString());         //hasil: andi,dina,erik,joko,zulkifli
+        </script>
+        <br>
+        <script>
+            var arr2 = [3,5,2,8,,,1,31,22,44,33,11];
+            arr2.soort();
+            document.write(arr2.toString());         //hasil: 1,11,2,22,3,31,33,44,5,8,,
+        </script>
+    </head>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Belajar JavaScript di STIKOM</title>
+
+        <script>
+            var arr2 = [3,5,2,8,,,1,31,22,44,33,11];
+            arr2.soort(function(a,b) {return a-b;});
+            document.write(arr2.toString());
+        </script>
+    </head>
+</html>
+
+// method objek Array: Array.concat()
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Belajar JavaScript di STIKOM</title>
+
+        <script>
+            var arr1 = [1,2,3,4,"a","b","c","d"];
+            document.write(arr1.toString());         //hasil: 1,2,3,4,a,b,c,d
+
+            var arr2=arr1.concat(11,22,33,44);
+            document.write(arr2.toString()); 
+        </script>
+    </head>
+</html>
+
+// method objek Array: Array.slice()
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Belajar JavaScript di STIKOM</title>
+
+        <script>
+            var arr1 = [1,2,3,4,"a","b","c","d"];
+
+            //slice dari index ke 2 sampai 4 
+            var arr2 = arr1.slice(2,4)
+            document.write(arr2.toString());         //hasil: 3,4
+        </script>
+        <br>
+        <script>
+        //slice dari index ke 4 sampai akhir array
+            var arr3 = arr1.slice(4)
+            document.write(arr3.toString());         //hasil: a,b,c,d
+        </script>
+
+    </head>
+</html>
+
+// method objek Array: Array.splice()
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Belajar JavaScript di STIKOM</title>
+
+        <script>
+            var arr1 = [1,2,3,4,"a","b","c","d"];
+            document.write(arr1.toString());         //hasil: 1,2,3,4,a,b,c,d
+        </script>
+        <br>
+        <script>
+        //splice dari index ke 4 
+            var arr2 = arr1.splice(4)
+            document.write(arr1.toString());         //hasil: 1,2,3,4
+            document.write(arr2.toString());         //hasil: a,b,c,d
+        </script>
+        <br>
+    </head>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Belajar JavaScript di STIKOM</title>
+
+        <script>
+            var arr1 = [1,2,3,4,"a","b","c","d"];
+            document.write(arr1.toString());         //hasil: 1,2,3,4,a,b,c,d
+        </script>
+        <br>
+        <script>
+        //splice dari index ke 4 
+            var arr2 = arr1.splice(3,3)
+            document.write(arr1.toString());         //hasil: 1,2,3,c,d
+        </script>
+        <br>
+        <script>
+            document.write(arr2.toString());         //hasil: 4,a,b
+        </script>
+
+    </head>
+</html>
+
+// method objek Array: Array.unshift() dan Array.shift()
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Belajar JavaScript di STIKOM</title>
+
+</head>
+
+<body>
+    <h1>Menambah Elemen Array</h1>
+    <script>
+        var hari=new Array('Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu');
+
+        document.write("Sebelum   : "+hari+"<br>");
+        hari.unshift("Minggu")
+        document.write("setelah   : "+hari+"<br>");
+        
+    </script>
+</body>
+</html>
