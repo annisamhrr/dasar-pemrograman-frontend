@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempat Wisata Banyuwangi</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .wisata-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .wisata-img {
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1050;
+      padding: 20px;
+    }
+
+    .popup.hidden {
+      display: none;
+    }
+
+    .popup img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row justify-content-center g-4">
+      <!-- Kawah Ijen -->
+      <div class="col-md-4 text-center wisata-card">
+        <img src="kawah ijen.jpg" alt="Kawah Ijen" class="wisata-img mb-3">
+        <button class="btn btn-warning" onclick="showPopup('Kawah Ijen', 'Gunung Ijen adalah sebuah gunung berapi yang terletak di perbatasan Kabupaten Banyuwangi dan Kabupaten Bondowoso, Jawa Timur, Indonesia. Gunung ini memiliki ketinggian 2.386 mdpl.', 'kawah ijen.jpg')">Kawah Ijen</button>
+      </div>
+      <!-- Djawatan -->
+      <div class="col-md-4 text-center wisata-card">
+        <img src="Djawatan.jpg" alt="Djawatan" class="wisata-img mb-3">
+        <button class="btn btn-warning" onclick="showPopup('Djawatan', 'De Djawatan merupakan tempat wisata yang terletak di Desa Benculuk, Kecamatan Cluring, Kabupaten Banyuwangi, Jawa Timur. Kawasan ini mirip dengan Hutan Fangorn dalam film Lord of The Rings, menawarkan pemandangan hutan trembesi yang hijau.', 'Djawatan.jpg')">Djawatan</button>
+      </div>
+      <!-- Pulau Merah -->
+      <div class="col-md-4 text-center wisata-card">
+        <img src="pulau merah.jpg" alt="Pulau Merah" class="wisata-img mb-3">
+        <button class="btn btn-warning" onclick="showPopup('Pulau Merah', 'Pantai Pulau Merah adalah salah satu ikon wisata Banyuwangi. Pantai ini memiliki pasir putih lembut, ombak yang cocok untuk berselancar, serta pemandangan pulau kecil di tengah laut.', 'pulau merah.jpg')">Pulau Merah</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content position-relative">
+      <span class="close-btn" onclick="hidePopup()">&times;</span>
+      <img id="popup-img" src="" alt="Gambar Wisata">
+      <h3 id="popup-title"></h3>
+      <p id="popup-desc"></p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showPopup(title, description, imgSrc) {
+      document.getElementById("popup-title").textContent = title;
+      document.getElementById("popup-desc").textContent = description;
+      document.getElementById("popup-img").src = imgSrc;
+      document.getElementById("popup").classList.remove("hidden");
+    }
+
+    function hidePopup() {
+      document.getElementById("popup").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>

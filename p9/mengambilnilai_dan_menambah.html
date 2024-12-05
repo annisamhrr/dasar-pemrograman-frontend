@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar jQuery</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#tambah").click(function() {
+                var nilai = $("#nama_kota").val();
+                var baris_baru = "<tr><td>"+nilai+"</td></tr>";
+                $("#tabel_kota").append(baris_baru);
+            })
+
+        });
+    </script>
+    <style>
+        table {
+            border-collapse:collapse;
+            border-spacing:0;
+            border:1px black solid;
+            margin-top: 20px;
+        }
+        th, td{
+            padding:5px 10px;
+            border:1px black solid;
+        }
+        th {
+            background-color: #87f97b;
+        }
+        tr:nyh-child(even) {
+            background-color: #EDEDED;
+        }
+        tr:nth-child(odd) {
+            background-color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    Kota: <input type="text" id="nama_kota" value="">
+    <button id="tambah">Tambah Kota</button>
+    <table id="tabel_kota">
+        <tr><th>Nama Kota</th></tr>
+        <tr><th>Bandung</th></tr>
+        <tr><th>Jakarta</th></tr>
+        <tr><th>Makassar</th></tr>
+        <tr><th>Medan</th></tr>
+    </table>
+</body>
+</html>
