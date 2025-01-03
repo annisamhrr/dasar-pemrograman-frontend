@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelian Buah</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 80px);
+            padding: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #4e94c5;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4e94c5;
+        }
+        .data-pembelian {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .data-pembelian p {
+            margin: 5px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Input untuk memasukkan nama buah -->
+    <div class="input-group">
+        <input type="text" id="fruitName" placeholder="Masukkan nama buah....">
+        <button onclick="beliBuah()">Beli</button>
+    </div>
+
+    <!-- Bagian Data Pembelian -->
+    <div class="data-pembelian">
+        <p>Data Pembelian :</p>
+        <p>Nama Buah : <span id="namaBuah">.............</span></p>
+        <p>Harga / Kg : <span id="hargaBuah">.............</span></p>
+        <p>Diskon : <span id="diskonBuah">.............</span></p>
+    </div>
+
+    <!-- Tabel harga buah -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Buah</th>
+                <th>Harga / Kg</th>
+                <th>Diskon</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nanas</td>
+                <td>7.500</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Anggur</td>
+                <td>35.000</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>Melon</td>
+                <td>12.500</td>
+                <td>10%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function beliBuah() {
+        const fruitName = document.getElementById("fruitName").value.toLowerCase();
+        let harga = ".............";
+        let diskon = ".............";
+        let nama = fruitName.charAt(0).toUpperCase() + fruitName.slice(1);
+
+        if (fruitName === "nanas") {
+            harga = "7.500";
+            diskon = "5%";
+        } else if (fruitName === "anggur") {
+            harga = "35.000";
+            diskon = "15%";
+        } else if (fruitName === "melon") {
+            harga = "12.500";
+            diskon = "10%";
+        } else {
+            nama = ".............";
+        }
+
+        document.getElementById("namaBuah").innerText = nama;
+        document.getElementById("hargaBuah").innerText = harga;
+        document.getElementById("diskonBuah").innerText = diskon;
+    }
+</script>
+
+</body>
+</html>
